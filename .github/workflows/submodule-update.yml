@@ -18,7 +18,7 @@ jobs:
     name: Submodule update
     runs-on: docker
     env:
-      PARENT_REPOSITORY: 'git@github.com/foxzi/tt_ee.git'
+      PARENT_REPOSITORY: 'https://github.com/foxzi/tt_ee'
       CHECKOUT_BRANCH: 'main'
       PR_AGAINST_BRANCH: 'main'
       OWNER: 'foxzi'
