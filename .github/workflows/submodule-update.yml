@@ -16,7 +16,7 @@ on:
 jobs:
   build:
     name: Submodule update
-    runs-on: ubuntu-latest
+    runs-on: docker
     env:
       PARENT_REPOSITORY: 'git@github.com/foxzi/tt_ee.git'
       CHECKOUT_BRANCH: 'main'
