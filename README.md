@@ -1,3 +1,4 @@
 # tt-core
 
-Test project
+Test python project. Math operations.
+
