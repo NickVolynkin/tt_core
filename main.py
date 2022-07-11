@@ -2,9 +2,6 @@
 
 #core math operation
 
-from tkinter import Y
-
-
 def sum(x, y):
     return x + y
 
