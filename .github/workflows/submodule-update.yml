@@ -21,6 +21,8 @@ jobs:
       PARENT_REPOSITORY: 'foxzi/tt_ee'
       CHECKOUT_BRANCH: 'main'
       PR_AGAINST_BRANCH: 'main'
+      PARENT_UPDATED_BRANCH: 'test-branch-for-pr'
+      TEXT_PULL_REQUEST: 'Submodule updated time for renew'
       OWNER: 'foxzi'
 
     steps:
@@ -35,11 +37,13 @@ jobs:
       ####################################
       - name: run action
         id: run_action
-        uses: releasehub-com/github-action-create-pr-parent-submodule@v1
+        uses: foxzi/github-action-create-pr-parent-submodule@v1.1
         with:
           github_token: ${{ secrets.RELEASE_HUB_SECRET }}
           parent_repository: ${{ env.PARENT_REPOSITORY }}
           checkout_branch: ${{ env.CHECKOUT_BRANCH}}
           pr_against_branch: ${{ env.PR_AGAINST_BRANCH }}
+          parent_updated_branch: ${{ env.PARENT_UPDATED_BRANCH }}
+#          text_pull_request: "${{ env.TEXT_PULL_REQUEST }}"
           owner: ${{ env.OWNER }}
 
