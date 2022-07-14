@@ -6,13 +6,8 @@ name: Submodule Updates
 #############################
 on:
   push:
-    branches-ignore: [master, main]
-  pull_request:
     branches: [master, main]
 
-###############
-# Set the Job #
-###############
 jobs:
   build:
     name: Submodule update
@@ -37,13 +32,12 @@ jobs:
       ####################################
       - name: run action
         id: run_action
-        uses: foxzi/github-action-create-pr-parent-submodule@v1.1
+        uses: foxzi/github-action-create-pr-parent-submodule@v1.1.2
         with:
           github_token: ${{ secrets.RELEASE_HUB_SECRET }}
           parent_repository: ${{ env.PARENT_REPOSITORY }}
           checkout_branch: ${{ env.CHECKOUT_BRANCH}}
           pr_against_branch: ${{ env.PR_AGAINST_BRANCH }}
           parent_updated_branch: ${{ env.PARENT_UPDATED_BRANCH }}
-#          text_pull_request: "${{ env.TEXT_PULL_REQUEST }}"
+          text_pull_request: "${{ env.TEXT_PULL_REQUEST }}"
           owner: ${{ env.OWNER }}
-
