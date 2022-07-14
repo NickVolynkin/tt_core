@@ -1,3 +1,3 @@
 #!/usr/bin/env python3
 
-echo("Test 55")
+echo("Test Super!")
